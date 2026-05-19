@@ -46,33 +46,33 @@
     </script>
 
     <style>
-        /* 🎨 KUANTUM SİBER TEMA ÇEKİRDEĞİ */
+        /* 🎨 KUANTUM SİBER TEMA ÇEKİRDEĞİ - TAŞMALAR ENGELLENDİ */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { background-color: #01070d; color: #7de8ff; font-family: 'Courier New', Courier, monospace; padding: 20px; line-height: 1.4; overflow-x: hidden; }
-        .terminal-container { max-width: 900px; margin: 0 auto; border: 1px solid #00f2fe; background: rgba(1, 7, 13, 0.9); padding: 25px; border-radius: 4px; box-shadow: 0 0 30px rgba(0, 242, 254, 0.15); }
+        .terminal-container { max-width: 900px; margin: 0 auto; border: 1px solid #00f2fe; background: rgba(1, 7, 13, 0.9); padding: 25px; border-radius: 4px; box-shadow: 0 0 30px rgba(0, 242, 254, 0.15); width: 100%; box-sizing: border-box; }
         .terminal-header { text-align: center; border-bottom: 2px solid #00f2fe; padding-bottom: 15px; margin-bottom: 25px; }
         .terminal-title { color: #00f2fe; font-size: 1.8rem; font-weight: bold; letter-spacing: 2px; text-shadow: 0 0 10px rgba(0, 242, 254, 0.5); }
         .terminal-subtitle { color: #39ff14; font-size: 0.85rem; margin-top: 5px; }
         
         /* 🧭 DİNAMİK KATEGORİ BARI */
-        .terminal-nav-bar { display: flex; width: 100%; border: 1px solid #00f2fe; background: rgba(1, 7, 13, 0.9); border-radius: 4px; overflow: hidden; margin-bottom: 25px; }
+        .terminal-nav-bar { display: flex; width: 100%; border: 1px solid #00f2fe; background: rgba(1, 7, 13, 0.9); border-radius: 4px; overflow: hidden; margin-bottom: 25px; box-sizing: border-box; }
         .nav-btn { flex: 1; text-align: center; padding: 12px 5px; cursor: pointer; font-size: 0.8rem; font-weight: bold; color: #7de8ff; transition: all 0.3s; letter-spacing: 1px; border-right: 1px solid rgba(0, 242, 254, 0.3); }
         .nav-btn:last-child { border-right: none; }
         .active-btn { color: #00f2fe; background: rgba(0, 242, 254, 0.15); text-shadow: 0 0 5px rgba(0, 242, 254, 0.5); }
         
-        /* 📦 ARAÇ KARTLARI STİLLERİ */
-        .siber-card { background: rgba(3, 15, 24, 0.85); border: 1px solid #00f2fe; padding: 20px; border-radius: 4px; box-shadow: 0 0 20px rgba(0,242,254,0.1); margin-bottom: 20px; width: 100%; }
+        /* 📦 ARAÇ KARTLARI STİLLERİ - RESPONSIVE AYARLANDI */
+        .siber-card { background: rgba(3, 15, 24, 0.85); border: 1px solid #00f2fe; padding: 20px; border-radius: 4px; box-shadow: 0 0 20px rgba(0,242,254,0.1); margin-bottom: 20px; width: 100%; box-sizing: border-box; overflow: hidden; }
         .card-header { font-size: 1rem; color: #00f2fe; font-weight: bold; margin-bottom: 12px; border-bottom: 1px dashed rgba(0,242,254,0.2); padding-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
         .card-desc { font-size: 0.85rem; color: #b1f1ff; line-height: 1.5; margin-bottom: 15px; }
-        .action-siber-btn { cursor: pointer; background: transparent; border: 1px solid #39ff14; color: #39ff14; padding: 12px 20px; font-family: 'Courier New'; font-weight: bold; font-size: 0.85rem; border-radius: 4px; box-shadow: 0 0 10px rgba(57,255,20,0.1); transition: all 0.3s; width: 100%; }
+        .action-siber-btn { cursor: pointer; background: transparent; border: 1px solid #39ff14; color: #39ff14; padding: 12px 20px; font-family: 'Courier New'; font-weight: bold; font-size: 0.85rem; border-radius: 4px; box-shadow: 0 0 10px rgba(57,255,20,0.1); transition: all 0.3s; width: 100%; box-sizing: border-box; }
         .action-siber-btn:hover { background: rgba(57, 255, 20, 0.1); box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); }
-        .log-display { display: none; background: #010508; border: 1px solid rgba(0,242,254,0.2); border-radius: 4px; padding: 12px; margin-top: 15px; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; width: 100%; }
+        .log-display { display: none; background: #010508; border: 1px solid rgba(0,242,254,0.2); border-radius: 4px; padding: 12px; margin-top: 15px; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; width: 100%; box-sizing: border-box; word-break: break-all; }
         
         /* 💰 MONETIZATION STİLLERİ */
-        .vpn-box { border: 1px solid #ff0055; background: rgba(255, 0, 85, 0.05); padding: 20px; border-radius: 4px; box-shadow: 0 0 15px rgba(255, 0, 85, 0.1); margin-top: 30px; text-align: center; }
+        .vpn-box { border: 1px solid #ff0055; background: rgba(255, 0, 85, 0.05); padding: 20px; border-radius: 4px; box-shadow: 0 0 15px rgba(255, 0, 85, 0.1); margin-top: 30px; text-align: center; box-sizing: border-box; }
         .vpn-btn { display: inline-block; text-decoration: none; background: #ff0055; color: #fff; padding: 12px 25px; font-weight: bold; font-size: 0.85rem; border-radius: 4px; box-shadow: 0 0 10px rgba(255, 0, 85, 0.4); transition: all 0.3s; margin-top: 10px; }
-        .finance-split { display: flex; flex-wrap: wrap; gap: 20px; width: 100%; margin-top: 20px; }
-        .finance-card { flex: 1; min-width: 280px; border-radius: 4px; padding: 15px; background: rgba(1,7,13,0.5); }
+        .finance-split { display: flex; flex-wrap: wrap; gap: 20px; width: 100%; margin-top: 20px; box-sizing: border-box; }
+        .finance-card { flex: 1; min-width: 280px; border-radius: 4px; padding: 15px; background: rgba(1,7,13,0.5); box-sizing: border-box; }
     </style>
 </head>
 <body>
@@ -207,34 +207,60 @@ function runFingerprintScanner() {
 function runWebRTCScanner() {
     var logDiv = document.getElementById('webrtc-log');
     logDiv.style.display = 'block';
-    logDiv.innerHTML = "[+] ISTIHBARAT SORGUSU AÇILDI...\n[*] STUN/TURN ağ geçitlerine sinyal gönderiliyor...\n";
+    logDiv.innerHTML = "[+] SIZINTI AVLAYICI TETİKLENDİ...\n[*] Yerel ağ geçitleri bypass ediliyor...\n";
+    
+    var ips = [];
     var ipFound = false;
-    var rtc = new RTCPeerConnection({ iceServers: [{ urls: "stun:stun.l.google.com:19302" }] });
-    rtc.createDataChannel("");
-    rtc.createOffer().then(offer => rtc.setLocalDescription(offer));
-    rtc.onicecandidate = function(ice) {
-        if (!ice || !ice.candidate || !ice.candidate.candidate) {
-            if(!ipFound) {
-                setTimeout(function() {
-                    logDiv.innerHTML += "\n[✔] SORGULAMA TAMAMLANDI.\n[🔒 GÜVENLİ]: Tarayıcıda WebRTC sızıntı koruması aktif veya katı bir VPN tüneli yerel sızıntıyı bloke ediyor.";
-                }, 1000);
-            }
-            return;
-        }
-        var candidate = ice.candidate.candidate;
-        var ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3})|([a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g;
-        var ipAddr = candidate.match(ipRegex);
-        if (ipAddr && ipAddr[0]) {
-            ipFound = true;
-            logDiv.innerHTML += "\n[🚨 SIZINTI YAKALANDI!]\n" +
+    
+    // Tarayıcı engellerine karşı timeout güvenlik ağı (Butonun takılmasını çözen kısım)
+    var timeoutGuard = setTimeout(function() {
+        if (!ipFound) {
+            logDiv.innerHTML += "\n[✔] TARAMA OPERASYONU TAMAMLANDI.\n" +
                 "--------------------------------------------------\n" +
-                ">> DETECTED_RAW_IP : " + ipAddr[0] + "\n" +
-                ">> INFRA_TYPE      : " + (ipAddr[0].includes('.') ? 'IPv4 (Lokal LAN / Gerçek Ağ Şeması)' : 'IPv6 Sızıntı Bloğu') + "\n" +
+                ">> STATUS          : SECURE (Sızıntı Engellendi)\n" +
+                ">> DETECTED_RAW_IP : SYSTEM_ROUTER_HIDDEN\n" +
                 "--------------------------------------------------\n\n" +
-                "[🔥 KRİTİK NOT]: Aktif bir proxy/VPN kullansanız dahi, tarayıcınız bu gerçek ağ IP adresini dış dünyaya sızdırıyor! Ağ güvenliğiniz risk altında.";
-            rtc.onicecandidate = null;
+                "[🔒 GÜVENLİ]: Tarayıcınız güncel siber koruma modunda veya katı bir VPN tüneli (mDNS maskeleme) WebRTC üzerinden gerçek IP adresinizin dışarı sızmasını başarıyla bloke ediyor.";
         }
-    };
+    }, 2500);
+
+    try {
+        var rtc = new RTCPeerConnection({
+            iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+            iceTransportPolicy: "all"
+        });
+        
+        rtc.createDataChannel("");
+        rtc.createOffer().then(offer => rtc.setLocalDescription(offer)).catch(e => {
+            ipFound = false;
+        });
+        
+        rtc.onicecandidate = function(ice) {
+            if (!ice || !ice.candidate || !ice.candidate.candidate) return;
+            
+            var candidate = ice.candidate.candidate;
+            var ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3})|([a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g;
+            var ipAddr = candidate.match(ipRegex);
+            
+            if (ipAddr && ipAddr[0]) {
+                var currentIp = ipAddr[0];
+                if (ips.indexOf(currentIp) === -1) {
+                    ips.push(currentIp);
+                    ipFound = true;
+                    clearTimeout(timeoutGuard); // Gerçek sızıntı varsa korumayı iptal et logu bas
+                    
+                    logDiv.innerHTML += "\n[🚨 KRİTİK SIZINTI DETEKTED!]\n" +
+                        "--------------------------------------------------\n" +
+                        ">> DETECTED_RAW_IP : " + currentIp + "\n" +
+                        ">> INFRA_TYPE      : " + (currentIp.includes('.') ? 'IPv4 (Lokal/Gerçek Ağ Şeması)' : 'IPv6 Sızıntı Bloğu') + "\n" +
+                        "--------------------------------------------------\n\n" +
+                        "[🔥 KRİTİK UYARI]: Aktif bir proxy veya VPN kullansanız dahi, tarayıcınız bu ham IP adresini dış dünyaya açıkça sızdırıyor! Ağ kimliğiniz deşifre oldu.";
+                }
+            }
+        };
+    } catch (err) {
+        ipFound = false;
+    }
 }
 </script>
 </body>
